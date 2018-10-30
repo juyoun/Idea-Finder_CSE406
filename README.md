@@ -1,2 +1,2 @@
-# IdeaFinder_CSE406
+# Idea Finder_CSE406
 Software Engineering Project
