@@ -1,54 +1,24 @@
 <!DOCTYPE HTML>
-
 <html>
-	<head>
-		<title>Idea Finder</title>
+<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>Idea Finder</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+</head>
 
-		
-			<header id="header">
-				<h1>Idea Finder</h1>
-				<p>A simple method for finding your idea.<br />
-				
-            </header>
-            
-
-            <form id="signup-form" method="post" action="#" name="form" onsubmit=" Chk_Checked()">
-                    
-                    <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
-                    <input type="submit" name="submit" id="sub" value="확인" onclick="location.href='index2.html'">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                <div class="check" style="margin-top:10px;">
-                    <input type="checkbox" name="kind1" id="app" class="checkbox-style" value="1" /><label for="app">App</label>
-                    <input type="checkbox" name="kind2" id="paper" class="checkbox-style" value="2"/><label for="paper">Paper</label>
-                    <input type="checkbox" name="kind3" id="news" class="checkbox-style" value="3"/><label for="news">News</label>     
-                </div>
-                    
-            </form>
-        <div class="img">
-            <img src="logo3.png" style="max-width: 25%; height: auto;">
-        </div>
+<body class="is-preload">
     <style>
-        
         body {text-align: center;}
         .img {text-align: center;}
         form{
             text-align: center;
             margin: 0 auto;
-        }
-
-        input[type=checkbox] {  
-            display: none;  
             }
-
+        input[type=checkbox] {  
+              display: none;  
+            }
         input[type=checkbox] + label{
             display: inline-block;  
             cursor: pointer;  
@@ -56,16 +26,12 @@
             padding-left: 25px;  
             margin-right: 15px;  
             font-size: 13px;
-        }
-
+            }
         input[type=checkbox]+ label:before {     
-
             content: "";  
             display: inline-block;  
-        
             width: 20px;  
             height: 20px;  
-        
             margin-right: 10px;  
             position: absolute;  
             left: 0;  
@@ -73,9 +39,8 @@
             background-color: #ccc;  
             border-radius: 2px; 
             box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
-        }
+            }
         input[type=checkbox]:checked + label:before { 
-
             content: "\2713";  
             text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  
             font-size: 18px; 
@@ -84,18 +49,46 @@
             background:#2f87c1;
             text-align: center;  
             line-height: 18px;  
-
-        } 
-
-
-
+            } 
     </style>
-       
-       
-            <script src="assets/js/main.js">
-            function Chk_Checked() {
-            var setChk = "";
 
+    <nav class="navbar navbar-default" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" 
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+
+    <header id="header">
+        <h1>Idea Finder</h1>
+        <p>A simple method for finding your idea.<br />
+    </header>
+
+    <form id="signup-form" method="post" action="#" name="form" onsubmit=" Chk_Checked()">
+        <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
+        <input type="submit" name="submit" id="sub" value="확인" onclick="location.href='index2.html'">
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="check" style="margin-top:10px;">
+            <input type="checkbox" name="kind1" id="app" class="checkbox-style" value="1" /><label for="app">App</label>
+            <input type="checkbox" name="kind2" id="paper" class="checkbox-style" value="2"/><label for="paper">Paper</label>
+            <input type="checkbox" name="kind3" id="news" class="checkbox-style" value="3"/><label for="news">News</label>     
+        </div>
+    </form>
+
+    <div class="img">
+        <img src="logo3.png" style="max-width: 25%; height: auto;">
+    </div>
+    <script src="assets/js/main.js">
+    function Chk_Checked() {
+    var setChk = "";
     if(document.form.kind1.checked) {
      setChk += "1번,";
     }
@@ -105,16 +98,14 @@
     if(document.form.kind3.checked) {
      setChk += "3번,";
     }
-
     if (setChk.length == "0") {
      alert ("그림을 선택해주세요");
-
-    }	else {
+    }	
+    else {
      setChk = setChk.substr(0, setChk.length-1);
      alert (setChk+"그림을 선택해주셨군요");
+        }
     }
-  }
-            </script>
-            
-	</body>
+    </script>
+</body>
 </html>
