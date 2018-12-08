@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Idea Finder</title>
     <link rel="stylesheet" href="assets/css/main.css"> 
+    <link rel="stylesheet" href="assets/css/bootstrap.css"> 
+
 </head>
 
 <body class="is-preload">
@@ -56,12 +58,12 @@
         <p>A simple method for finding your idea.<br />
     </header>
 
-    <form id="signup-form" method="post" action="grading.html" name="form"">
+    <form id="signup-form" method="post" action="grading.html" name="form">
        
         <div class="check" style="margin-top:10px;">
-            <input type="checkbox" name="check" class="checkbox-style" value="app" checked><label for="app">App</label>
-            <input type="checkbox" name="check" class="checkbox-style" value="paper"><label for="paper">Paper</label>
-            <input type="checkbox" name="check" class="checkbox-style" value="news"><label for="news">News</label>     
+            <input type="checkbox" name="check" id="appstore" class="checkbox-style" value="appstore" checked><label for="appstore">App Store</label>
+            <input type="checkbox" name="check" id="playstore" class="checkbox-style" value="playstore"><label for="playstore">Play Store</label>
+            <input type="checkbox" name="check" id="news" class="checkbox-style" value="news"><label for="news">News</label>     
         </div>
        
         <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요" required>
