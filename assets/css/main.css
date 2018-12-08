@@ -790,7 +790,7 @@ input, select, textarea {
 		border-radius: 6px;
 		border: none;
 		border: solid 2px rgba(255, 255, 255, 0.35);
-		color: inherit;
+		/*color: inherit*/;
 		display: block;
 		outline: 0;
 		padding: 0 1em;
