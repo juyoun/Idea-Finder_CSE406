@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Idea Finder</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+
+<script>
+  function Chk_Checked() {
+     var setChk = "";
+
+    if(document.form.kind1.checked) {
+     setChk += "1번,";
+    }
+    if(document.form.kind2.checked) {
+     setChk += "2번,";
+    }
+    if(document.form.kind3.checked) {
+     setChk += "3번,";
+    }
+
+    if (setChk.length == "0") {
+     alert ("그림을 선택해주세요");
+
+    }	else {
+     setChk = setChk.substr(0, setChk.length-1);
+     alert (setChk+"그림을 선택해주셨군요");
+    }
+  }
+</script>
+<a href="main.html">첫 페이지로</a>
+<a href="index3.html">자세히</a>
+</body>
+</html>

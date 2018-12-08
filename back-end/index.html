@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>Idea Finder</title>
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		
+			<header id="header">
+				<h1>Idea Finder</h1>
+				<p>A simple method for finding your idea.<br>
+			</header>
+
+		
+        <pre>   
+        <form id="signup-form" method="post" action="#">
+                
+                <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
+                <input type="submit" name="submit" id="sub" value="확인">
+
+                <br>
+                <br>
+                <br>
+                
+            <input type="checkbox" name="kind" value="App">App
+            <br>
+            <input type="checkbox" name="kind" value="News">News
+             <br>
+            
+             
+
+            </form>
+</pre>
+        <style>
+            input[type=checkbox]:not(old) {
+                margin: 0;
+                padding: 0;
+                opacity: 0;
+                background: url(/images/check_on.png) no-repeat 0 0;
+                width: 0;
+            }
+
+                input[type=checkbox]:not(old) + label {
+                    display: inline-block;
+                    text-align: left;
+                    height: 20px;
+                    padding-left: 25px;
+                    background: url(/images/check_off_2.png) no-repeat 0 0;
+                    line-height: 130%;
+                    vertical-align: top;
+                }
+
+                input[type=checkbox]:not(old):checked + label {
+                    background: url(/images/check_on_2.png) no-repeat 0 0;
+                }
+
+        </style>
+
+		
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
