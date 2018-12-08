@@ -102,7 +102,7 @@
 		})();
 
 	// Signup Form.
-		(function() {
+		/*(function() {
 
 			// Vars.
 				var $form = document.querySelectorAll('#signup-form')[0],
@@ -167,5 +167,6 @@
 				});
 
 		})();
+		*/
 
 })();
