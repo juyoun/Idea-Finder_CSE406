@@ -22,6 +22,13 @@ router.get('/', function(req, res){
 	
 });
 
+
+
+router.get('/main.html', function(req, res){
+	res.sendFile(path.join(__dirname, 'views','main.html'));
+});
+
+
 router.post('/grading.html', function(req, res){
         search = req.body.search;
         //var Collect = new Search();
