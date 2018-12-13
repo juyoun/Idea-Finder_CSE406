@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var userSchema = new mongoose.Schema({
-  keyword: String,
-  
+  keyword : String,
+  count : Number
 });
-module.exports = mongoose.model('User', userSchema);
+
+module.exports = mongoose.model('Search', userSchema);

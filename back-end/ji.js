@@ -19,7 +19,6 @@ router.get('/', function(req, res){
 	//docs[0].keyword 가 랭킹1위 2위는 docs[1].keyword.  for문 돌리면될듯	
 	
 	});
-	
 });
 
 router.post('/grading.html', function(req, res){
@@ -34,9 +33,6 @@ router.post('/grading.html', function(req, res){
                         else
                                 console.log("DB insert OK");
                 });
-		res.render('grading.html',{
-                        title: search
-});
 });
 /*myGoogleNews.resultsPerPage = 100; // max 100
 

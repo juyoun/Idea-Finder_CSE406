@@ -2,11 +2,15 @@ var express = require('express');
 var router = express.Router();
 var Search = require('./ranking');
 var path = require('path');
-
+var search;
 var store = require('app-store-scraper');
 var myGoogleNews = require('my-google-news');
 var gplay = require('google-play-scraper');
-var search;
+var count1;
+var count2;
+var count3;
+
+
 
 router.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views','main.html'));
@@ -19,7 +23,6 @@ router.get('/', function(req, res){
 	//docs[0].keyword 가 랭킹1위 2위는 docs[1].keyword.  for문 돌리면될듯	
 	
 	});
-	
 });
 
 router.post('/grading.html', function(req, res){
@@ -34,15 +37,11 @@ router.post('/grading.html', function(req, res){
                         else
                                 console.log("DB insert OK");
                 });
-		res.render('grading.html',{
-                        title: search
-});
-});
-/*myGoogleNews.resultsPerPage = 100; // max 100
+	myGoogleNews.resultsPerPage = 100; // max 100
 
         var nextCounter = 0;
         var googleQuery= search; //search Query
-        var count1 = 0;
+        count1 = 0;
         var result1 = new Array;
 
 
@@ -62,13 +61,14 @@ router.post('/grading.html', function(req, res){
     nextCounter += 1
     if (res2.next) return res2.next()
     else{
-        
+         result1.push(count1);
+   //	console.log('count1:' + count1 + ' type: '+ typeof(count1));
   }
 }
         
 });
 
-		var count2 = 0;
+		count2 = 0;
                 var result2 = new Array;
 
                 var data = gplay.search({
@@ -80,10 +80,12 @@ router.post('/grading.html', function(req, res){
                  result2.push(data[attr].title);
                  count2 += 1;
                 }
-              
+                result2.push(count2);
   //console.log(count);
+
+
 });
-	var count3 = 0;
+	count3 = 0;
         var result3 = new Array;
 
         var data = store.search({
@@ -96,13 +98,13 @@ router.post('/grading.html', function(req, res){
         result3.push(data[attr].title);
         count3 += 1;
         }
-        });
-
-var count4= Number(count1)+ Number(count2) + Number(count3);
-res.render('grading.html',{
+        result3.push(count3);
+	res.render('grading.html',{
                         title: search,
-		        score: count4
-        }); */
+                        score: count3
+        });
+});
+});
 
 
 router.get('/detail.html', function(req, res){
@@ -111,6 +113,9 @@ router.get('/detail.html', function(req, res){
 
 router.get('/app_detail.html', function(req, res){
 	var count = 0;
+	
+	console.log('type of count: ' + typeof(count));
+
 	var result = new Array;
 
         var data = store.search({
@@ -164,6 +169,10 @@ router.get('/news_detail.html', function(req, res){
   }
 }
 console.log(count);
+console.log(' type: '+ typeof(count));
+
+
+
 res.render('news_detail.html',{
                         title: search,
                         nav: result,
@@ -198,6 +207,10 @@ router.get('/paper_detail.html', function(req, res){
 });
 });
 });
+
+
+
+
 /*
 router.get('/grading.html', function(req, res){
    var search = req.body.search;
