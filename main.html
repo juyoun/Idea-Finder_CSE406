@@ -58,12 +58,12 @@
         <p>A simple method for finding your idea.<br />
     </header>
 
-    <form id="signup-form" method="post" action="grading.html" name="form">
+    <form id="signup-form" method="post" action="grading.html" name="form" onsubmit="return CheckForm(this)">
        
         <div class="check" style="margin-top:10px;">
-            <input type="checkbox" name="check" id="appstore" class="checkbox-style" value="appstore" checked><label for="appstore">App Store</label>
-            <input type="checkbox" name="check" id="playstore" class="checkbox-style" value="playstore"><label for="playstore">Play Store</label>
-            <input type="checkbox" name="check" id="news" class="checkbox-style" value="news"><label for="news">News</label>     
+            <input type="checkbox" name="check[]" id="appstore" class="checkbox-style" value="appstore" checked><label for="appstore">App Store</label>
+            <input type="checkbox" name="check[]" id="playstore" class="checkbox-style" value="playstore"><label for="playstore">Play Store</label>
+            <input type="checkbox" name="check[]" id="news" class="checkbox-style" value="news"><label for="news">News</label>     
         </div>
        
         <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요" required>
@@ -75,9 +75,29 @@
     </form>
 
     <div class="img">
-        <img src="logo3.png" style="max-width: 25%; height: auto;">
+        <img src="images/logo3.png" style="max-width: 25%; height: auto;">
     </div>
     <script src="assets/js/main.js">
+
+    function CheckForm(){
+    
+    var isSeasonChk = false;
+        var arr_Season = document.getElementsByName("check[]");
+        for(var i=0;i<arr_Season.length;i++){
+            if(arr_Season[i].checked == true) {
+                isSeasonChk = true;
+                break;
+            }
+        }
+    
+        if(!isSeasonChk){
+            alert("계절의 종류를 한개 이상 선택해주세요.");
+            return false;
+        }
+
+    }
+
+
     </script>
 </body>
 </html>
