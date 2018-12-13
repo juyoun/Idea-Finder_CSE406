@@ -7,8 +7,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+html, body/*, div*/, span, applet, object,
+/*iframe,*/ h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -29,7 +29,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-body {
+body/*,iframe*/ {
 	line-height: 1;
 }
 
@@ -51,7 +51,7 @@ table {
 	border-spacing: 0;
 }
 
-body {
+body/*,iframe*/ {
 	-webkit-text-size-adjust: none;
 }
 
@@ -78,13 +78,13 @@ input, select, textarea {
 		width: device-width;
 	}
 
-	body {
+	body/*,iframe*/ {
 		-ms-overflow-style: scrollbar;
 	}
 
 	@media screen and (max-width: 480px) {
 
-		html, body {
+		html, body/*,iframe*/ {
 			min-width: 320px;
 		}
 
@@ -98,7 +98,7 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	html, body {
+	html, body/*,iframe*/ {
 		height: 100%;
 		overflow-x: hidden;
 		width: 100%;
@@ -106,14 +106,14 @@ input, select, textarea {
 
 		@media screen and (max-height: 640px) {
 
-			html, body {
+			html, body/*,iframe*/ {
 				height: auto;
 				min-height: 100%;
 			}
 
 		}
 
-	body {
+	body/*,iframe*/ {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1072,7 +1072,7 @@ input, select, textarea {
 		#signup-form input[type="text"],
 		#signup-form input[type="password"],
 		#signup-form input[type="email"] {
-			width: 18em;
+			width: 40em;
 		}
 
 		#signup-form > * {
