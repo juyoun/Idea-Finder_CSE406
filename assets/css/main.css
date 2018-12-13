@@ -1072,7 +1072,7 @@ input, select, textarea {
 		#signup-form input[type="text"],
 		#signup-form input[type="password"],
 		#signup-form input[type="email"] {
-			width: 18em;
+			width: 40em;
 		}
 
 		#signup-form > * {
